@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "firebase-admin": "^9.11.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0"
   }
 }

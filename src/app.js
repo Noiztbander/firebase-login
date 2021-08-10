@@ -2,7 +2,6 @@ const express = require("express");
 const morgan = require("morgan");
 const exhbs = require("express-handlebars");
 const path = require("path");
-const { extname } = require("path");
 
 const app = express();
 
@@ -10,13 +9,13 @@ const app = express();
 app.set("port", process.env.PORT || 4000);
 app.set("views", path.join(__dirname, "views"));
 app.engine(
-  "myEngine",
+  ".hbs",
   exhbs({
     defaultLayout: "main",
-    extname: ".hbs",
+    extname: ".hbs"
   })
 );
-app.set("view engine", "myEngine");
+app.set("view engine", ".hbs");
 
 // middlewares
 app.use(morgan("dev"));
